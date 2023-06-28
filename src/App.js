@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Landing from './pages/Landing';
+import Footer from './components/Footer';
+import LogIn from './components/LogIn';
+import New from './components/New';
+import Home from './components/Home';
+import EventCalendar from './calendar/eventCalendar';
+import mockTasks from './mockTasks';
 
-function App() {
+const App = () => {
+  const [practice, setPractice] = useState(mockTasks);
+  console.log(practice);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <LogIn />
+        <Landing />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/calendar" element={<EventCalendar />} />
+          <Route path="/new" element={<New practice={practice}/>} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,139 @@
+
+
+  .background{
+  position: absolute !important;
+  z-index: -1 !important;
+  border: 1px solid red;
+ 
+  }
+
+  .container {
+    position: relative !important;
+    z-index: 100 !important;
+    border: 1px solid red;
+
+  }
+  
+  .content-wrapper {
+    position: relative;
+    z-index: 2;
+  }
+  .container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  #para {
+    background-color: white;
+    height: 20em;
+  }
+  
+  .note-position {
+    margin-left: 13%;
+    margin-top: 10%;
+  }
+  
+  .note {
+    color: #992509;
+    height: 20vh;
+    width: 740vw;
+    max-width: 100%;
+    font-family: 'Alegreya';
+  }
+  
+  #key-features {
+    background-color: #eebd43;
+    padding-top: 9vw;
+    padding-bottom: 9vw;
+  }
+  
+  .points {
+    margin-left: 13%;
+  }
+  
+  .tit {
+    font-family: 'Eczar SemiBold';
+    font-size: 7vw;
+  }
+  
+  .subtit {
+    max-width: 45vw;
+    font-family: 'Alegreya';
+  }
+  
+  #house-pic {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .house {
+    height: 30vw;
+    width: 30vw;
+    max-width: 100%;
+    margin-top: -40%;
+    padding-right: 10vw;
+  }
+  
+  #boxes {
+    width: 60vw;
+    margin: 0 auto;
+    padding-top: 9vw;
+    background-color: #eebd43;
+  }
+  
+  .box1 {
+    background-color: #dc9427;
+  }
+  
+  .box2 {
+    background-color: #dc9427;
+  }
+  
+  .box3 {
+    background-color: #dc9427;
+  }
+  
+  #message {
+    padding-top: 9vw;
+    background-color: #eebd43;
+    font-family: 'Alegreya';
+  }
+  
+  .ready {
+    height: 20vh;
+    width: 50vw;
+    margin-left: 13%;
+    margin-top: 10%;
+  }
+  
+  .btns {
+    display: flex;
+    margin-left: 20%;
+    margin-top: 4%;
+    gap: 3vw;
+  }
+  
+  .B1 {
+    background-color: black;
+    color: white;
+    border-radius: 15%;
+  }
+  
+  .B2 {
+    background-color: #992509;
+    color: white;
+    border-radius: 15%;
+  }
+  
+  
+  #fam-img {
+    background-color: #eebd43;
+    padding-top: 12vw;
+  }
+  
+  .fam {
+    height: 50vw;
+    width: 70vw;
+    margin-left: 14%;
+  }

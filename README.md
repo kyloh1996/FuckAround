@@ -1,70 +1,261 @@
-# Getting Started with Create React App
+Init code for pages: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+import React from 'react';
 
-## Available Scripts
 
-In the project directory, you can run:
+const \name\ = () => {
+    return (
+        <>
+        </>
+    )
+}
 
-### `yarn start`
+export default \name\;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+INIT Header NavBar:
 
-### `yarn test`
+import React from 'react';
+import { Navbar, Nav } from 'rsuite';
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+import '../style/Header.css';
 
-### `yarn build`
+const Header = () => {
+  return (
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    <Navbar id='nav'>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+      <div>
+        <img src="/images/logo.jpeg" alt="Logo" className="logo" />
+      </div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+        <Nav className='left'>
+            <Nav.Item href='' >Home
+                </Nav.Item>
+            <Nav.Item href='' >About Us
+                </Nav.Item>
+            <Nav.Item href='' >Contact
+                </Nav.Item>
+        </Nav>
 
-### `yarn eject`
+        <Nav className='right'>
+            <Nav.Item href='' >Sign In
+                </Nav.Item>
+            <Nav.Item href='' >Sign Up
+                </Nav.Item>
+        </Nav>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    </Navbar>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  );
+};
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+export default Header;
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+INIT Footer:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+import React from 'react';
+import { Navbar, Nav } from 'rsuite';
 
-### Code Splitting
+import '../style/Footer.css';
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+const Footer = () => {
+    return (
+    <footer className="footer">
+      <div className="footer-content">
+        <span className="footer-text">© Whak inc. 2023. All rights reserved.</span>
+      </div>
+    </footer>    
+    )
+}
 
-### Making a Progressive Web App
+export default Footer;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Redoing Landing:
 
-### Deployment
+<Container id="landing-container">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<div className="Landing1">
+<h2 style={{color:'#992509'}}>Manage your home products with ease and never miss a maintenance task again!</h2>
+</div>
 
-### `yarn build` fails to minify
+<div className="Landing2">
+<h1>Key Features</h1>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p>Securely log in and manage your inventory, scheduling maintenance tasks and tracking their history for every household item.</p>
+<p>Securely log in and manage your inventory, scheduling maintenance tasks and tracking their history for every household item.</p>
+<p>Securely log in and manage your inventory, scheduling maintenance tasks and tracking their history for every household item.</p>
+
+<img src='' alt='' className='' />
+
+</div>
+
+ <Container style={{ position: 'relative' }}>
+      <div
+        id="house-img"
+        style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          display: 'flex',
+          justifyContent: 'flex-end',
+          alignItems: 'center',
+          marginTop: '9vw',
+          marginRight: '13%',
+        }}
+      >
+        <img src="../images/house.jpeg" alt="House" className="something" style={{ height: '12vw' }} />
+      </div>
+
+      <div
+        id="content"
+        style={{
+          paddingTop: '6vw',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '3vw',
+          paddingBottom: '6vw',
+          marginLeft: '13%',
+        }}
+      >
+        <Panel className="box1" style={{ border: '1px solid #000000', width: '27vw', borderRadius: '5px' }}>
+          <h2 style={{ marginLeft: '2vw' }}>Join the Team</h2>
+          <p style={{ marginLeft: '6vw' }}>Become a member</p>
+        </Panel>
+
+        <Panel className="box2" style={{ border: '1px solid #000000', width: '27vw', borderRadius: '5px' }}>
+          <h2 style={{ marginLeft: '2vw' }}>Stay on Task</h2>
+          <p style={{ marginLeft: '6vw' }}>Become a member</p>
+        </Panel>
+
+        <Panel className="box3" style={{ border: '1px solid #000000', width: '27vw', borderRadius: '5px' }}>
+          <h2 style={{ marginLeft: '2vw' }}>Responsive experience</h2>
+          <p style={{ marginLeft: '6vw' }}>Become a member</p>
+        </Panel>
+      </div>
+    </Container>
+
+
+
+
+
+
+
+
+</Container>
+
+
+
+### Things to add to my capstone:
+
+polygon panels - home page
+
+landing page edited 
+
+## .env for secret key API
+
+
+
+
+import ReactDOM from 'react-dom';
+import './styles.css';
+import React, { useState } from 'react';
+import { Button, Modal, Input, InputGroup, Form,} from 'rsuite';
+import mockTasks from '../mockTasks';
+
+
+
+const New = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [newTask, setNewTask] = useState({
+    id: mockTasks.length + 1,
+    area: '',
+    item: '',
+    task_name: '',
+    task_descr: '',
+    frequency: '',
+    due_date: '',
+    user_id: 1,
+  });
+
+  const handleClose = () => setShowModal(false);
+  const handleOpen = () => setShowModal(true);
+  const handleInputChange = (value, name) => setNewTask({...newTask, [name]: value});
+
+  const handleAddTask = () => {
+    mockTasks.push(newTask);
+    setNewTask({ ...newTask, id: mockTasks.length + 1 });
+    handleClose();
+};
+
+return (
+  <>
+    <Button appearance="primary" onClick={handleOpen}>
+      New Task
+    </Button>
+    <Modal show={showModal} onHide={handleClose}>
+      <Modal.Header>
+        <Modal.Title>Add New Task</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <Form fluid>
+          <Form.Group>
+            <Form.ControlLabel>Area</Form.ControlLabel>
+            <InputGroup>
+              <Input name="area" value={newTask.area} onChange={value => handleInputChange(value, 'area')} />
+            </InputGroup>
+          </Form.Group>
+          <Form.Group>
+            <Form.ControlLabel>Item</Form.ControlLabel>
+            <InputGroup>
+              <Input name="item" value={newTask.item} onChange={value => handleInputChange(value, 'item')} />
+            </InputGroup>
+          </Form.Group>
+          <Form.Group>
+            <Form.ControlLabel>Task Name</Form.ControlLabel>
+            <InputGroup>
+            <Input name="task_name" value={newTask.task_name} onChange={value => handleInputChange(value, 'task_name')} />
+              </InputGroup>
+            </Form.Group>
+            <Form.Group>
+              <Form.ControlLabel>Description</Form.ControlLabel>
+              <InputGroup>
+                <Input name="task_descr" value={newTask.task_descr} onChange={value => handleInputChange(value, 'task_descr')} />
+              </InputGroup>
+            </Form.Group>
+            <Form.Group>
+              <Form.ControlLabel>Frequency</Form.ControlLabel>
+              <InputGroup>
+                <Input name="frequency" value={newTask.frequency} onChange={value => handleInputChange(value, 'frequency')} />
+              </InputGroup>
+            </Form.Group>
+            <Form.Group>
+              <Form.ControlLabel>Due Date</Form.ControlLabel>
+              <InputGroup>
+                <Input name="due_date" value={newTask.due_date} onChange={value => handleInputChange(value, 'due_date')} />
+              </InputGroup>
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button appearance="primary" onClick={handleAddTask}>
+            Add Task
+          </Button>
+          <Button appearance="subtle" onClick={handleClose}>
+            Cancel
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      </>
+  );
+};
+
+
+
+ReactDOM.render(<New />, document.getElementById('root'));
